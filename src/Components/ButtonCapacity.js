@@ -2,13 +2,14 @@ import React from 'react';
 
 
 
-class ButtonCapacity extends React.Component {
-     combat = () => {
+const ButtonCapacity = () => {
+    const combat = () => {
         console.log('aie !')
     }
-    render() {
+    
+    {
         return (
-            <button type="button" onClick={() => this.combat()} className="btn btn-success material-tooltip-main ">
+            <button type="button" onClick={() => combat()} className="btn btn-success material-tooltip-main ">
                 hit
             <i className="fas fa-bomb"></i> 5
         <i className="fas fa-fire-alt"></i> - 5

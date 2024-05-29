@@ -1,13 +1,15 @@
 import React from 'react';
 import './Game.css';
 import Monster from './Monster';
+import ProgressBar from './ProgressBar';
 import PlayerList from './PlayerList';
 
-class App extends React.Component {
-  render() {
+const App = () => {
+   {
     return (
       <div className="App">
-        <Monster />
+          <Monster />
+          <ProgressBar />
         <br></br>
         <section className="container-fluid">
           <PlayerList />
