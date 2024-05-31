@@ -1,12 +1,17 @@
- import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import ImgPekka from '../../icons/Pekka.png';
+import ImgArcher from '../../icons/Archer.png';
+import ImgChevalier from '../../icons/Chevalier.png';
+import ImgDragon from '../../icons/Dragon.png';
+
 
 const initialState = {
 
     players: [
-         { name: "John", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 1 },
-         { name: "Jack", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 2 },
-         { name: "Jessy", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 3 },
-         { name: "Jenny", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 4 }
+         { name: "Pekka", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 1, image: ImgPekka },
+         { name: "Archer", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 2, image: ImgArcher },
+         { name: "Chevalier", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 3, image: ImgChevalier },
+         { name: "Dragon", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 4, image: ImgDragon }
         ],
 
     monster: {

@@ -12,6 +12,7 @@ const PlayerCard = ({ player }) => {
                 <h5 className="card-title">{player.name}</h5>
                 <ProgressBar pv={player.pv} pvMax={player.pvMax} faType='fa-heart' barName=' : pv ' bgType='bg-danger' />
                 <span className="badge badge-danger ml-2 " id="degatSpanJ1"></span>
+                <img src={player.image}></img>
                 <div className="row ">
                     <div >
                         <ButtonCapacity player={player.id} pv={ player.pv } />
