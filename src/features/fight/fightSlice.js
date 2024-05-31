@@ -19,21 +19,32 @@ const initialState = {
 export const fightSlice = createSlice({
     name: "fight",
     initialState,
-    reducer: 
+    reducers:
     {
-        hitMonster :(state,action) => {
+        hitMonster :(state , action) => {
             const damage = action.payload
             return {
                 ...state,
-                monster: {
-                    ...state.monsters,
+                monster: 
+                {
+                    ...state.monster,
                 pv: (state.monster.pv - damage)
-
                 }
             } 
-        }
-    },
-});
+        },
 
-export const { hitMonster } = fightSlice.actions
+        hitBack: (state, action) => {
+            const { playerId, attack } = action.payload;
+            state.players = state.players.map(player => {
+              if (player.id === playerId) {
+                player.pv -= attack;
+              }
+              return player;
+            });
+
+    },
+}});
+
+
+export const { hitMonster , hitBack } = fightSlice.actions
 export default fightSlice.reducer;

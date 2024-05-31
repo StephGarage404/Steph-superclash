@@ -6,13 +6,13 @@ const PlayerList = () => {
 
   const players = useSelector(state => state.fight.players);
 
-  console.log(players);
+
 
   return (
     <div className='row'>
       {
-        players.map((player, key) => (
-          <PlayerCard key={key} player={player} />
+        players.map((player, index) => (
+          <PlayerCard key={index} player={player} />
         ))
       }
     </div>
