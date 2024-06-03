@@ -17,7 +17,9 @@ const initialState = {
     monster: {
         name:"COMBAT",
         pv :"100",
-        pvMax: "100"
+        pvMax: "100",
+        mana : "100",
+        manaMax : "100"
     },
 };
 
@@ -28,6 +30,11 @@ export const fightSlice = createSlice({
     {
         hitMonster :(state , action) => {
             const damage = action.payload
+
+            if (state.monster.pv < 0) {
+                state.monster.pv = 0;
+            }
+
             return {
                 ...state,
                 monster: 
@@ -35,7 +42,7 @@ export const fightSlice = createSlice({
                     ...state.monster,
                 pv: (state.monster.pv - damage)
                 }
-            } 
+            }
         },
 
         hitBack: (state, action) => {

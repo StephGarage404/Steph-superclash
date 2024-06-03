@@ -6,6 +6,7 @@ import Game from './Components/Game';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const container = document.getElementById('root');

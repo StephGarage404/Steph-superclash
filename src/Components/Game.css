@@ -3,6 +3,8 @@
   background-image: url("../icons/Arene.png");
   background-size: cover;
   background-position: center;
+  background-size: 800px;
+  background-repeat: no-repeat;
 }
 
 .App-logo {

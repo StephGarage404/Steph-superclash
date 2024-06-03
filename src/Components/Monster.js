@@ -6,33 +6,34 @@ const Monster = () => {
    const monster = useSelector(state => state.fight.monster)
   
     return (
-      <section>
+      <section style={{ height: '100vh' }} className="d-flex align-items-center">
         <div className="container">
-          <div className="row">
-            <div className="card-monstre col-sm-12">
-              <div id="monsterCard">
-                <div className="text-center">
-                  <div className="row">
-                    <div className="col-sm-2 offset-sm-3">
-                      <span className="badge badge-danger ml-2 " id="degatSpanMonster"></span>
-
-                      <h1>{monster.name}</h1>
-
-                      <img className="img-fluid" src="/Cavalier.png" alt='monster' />
-                    </div>
-
-                    <div id="comboOnMonster" className="col-sm-6">
-
-                    </div>
+          <div className="row justify-content-center">
+            <div className="card-monstre col-sm-8">
+              <div id="monsterCard" className="text-center">
+                <div className="row justify-content-center">
+                  <div className="col-sm-6">
+                    <span className="badge badge-danger ml-2" id="degatSpanMonster"></span>
+                    <h1>{monster.name}</h1>
+                    <img className="img-fluid" src="/Cavalier.png" alt="monster" />
                   </div>
                 </div>
-                <ProgressBar pv={monster.pv} pvMax={monster.pvMax} bgType='bg-danger' faType='fa-heart' barName=' : pv' />
+                <div className="row justify-content-center mt-3">
+                  <div className="col-sm-6">
+                    <ProgressBar pv={monster.pv} pvMax={monster.pvMax} bgType='bg-danger' faType='fa-heart' barName=' : pv' />
+                  </div>
+                </div>
+                <div className="row justify-content-center mt-2">
+                  <div className="col-sm-6">
+                    <ProgressBar pv={monster.mana} pvMax={monster.manaMax} faType='fa-fire-alt' barName=' : mana ' />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section >
+      </section>
     )
-} 
+}
 
 export default Monster;
