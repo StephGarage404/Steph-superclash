@@ -1,15 +1,18 @@
 import React from 'react';
 import ProgressBar from './ProgressBar';
 import { useSelector } from 'react-redux';
+import './Game.css';
+
+
 
 const Monster = () => {
    const monster = useSelector(state => state.fight.monster)
   
     return (
-      <section style={{ height: '100vh' }} className="d-flex align-items-center">
+      <section className="d-flex align-items-center" id='monstre'>
         <div className="container">
           <div className="row justify-content-center">
-            <div className="card-monstre col-sm-8">
+            <div className="card-monstre col-sm-6">
               <div id="monsterCard" className="text-center">
                 <div className="row justify-content-center">
                   <div className="col-sm-6">

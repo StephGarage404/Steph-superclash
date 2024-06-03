@@ -1,25 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { hitMonster , hitBack } from '../features/fight/fightSlice';
+import { useSelector } from 'react-redux';
+
 
 
 
 
 const ButtonCapacity = ({player}) => {
 
+    const monster = useSelector(state => state.fight.monster)
+
     const dispatch = useDispatch();
 
     const combat = () => {
 
-        dispatch(hitMonster(5))
-        console.log('aie !')
+        if(monster.pv > 0) {
+            dispatch(hitMonster(5))
+            console.log('aie !')
+       
 
         dispatch(hitBack({ 
             playerId: player,
             attack: 10 
-        }
+        }))
     
-    ));
+        
+     }
+
+    
+    ;
     console.log("Je réplique");
     }
 

@@ -9,7 +9,6 @@ const App = () => {
     return (
       <div className="App">
           <Monster />
-          <ProgressBar />
         <br></br>
         <section className="container-fluid">
           <PlayerList />

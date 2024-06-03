@@ -15,7 +15,7 @@ const initialState = {
         ],
 
     monster: {
-        name:"COMBAT",
+        name:"Chevaucheur",
         pv :"100",
         pvMax: "100",
         mana : "100",

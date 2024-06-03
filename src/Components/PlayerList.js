@@ -7,7 +7,6 @@ const PlayerList = () => {
   const players = useSelector(state => state.fight.players);
 
 
-
   return (
     <div className='row'>
       {
