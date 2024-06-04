@@ -4,6 +4,10 @@ import Monster from './Monster';
 import ProgressBar from './ProgressBar';
 import PlayerList from './PlayerList';
 
+const fireBall = () => {
+
+}
+
 const App = () => {
    {
     return (

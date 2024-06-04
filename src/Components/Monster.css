@@ -1,0 +1,10 @@
+#BouleBleue {
+    width: 13em;
+    height: 10em;
+    background-size: cover;
+    display: block;
+    z-index: 1000; /* Pour s'assurer que l'image est au-dessus des autres éléments */
+    position:absolute;
+    top: -20em;
+    left: 27em;
+}

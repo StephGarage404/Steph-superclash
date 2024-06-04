@@ -17,8 +17,12 @@
 
 #monstre {
   position:absolute;
-  top: 52em;
-  left: 18em;
+  top: 56em;
+  left: 17em;
+}
+
+#LaSorciere {
+  width: 100em;
 }
 
 h1 {

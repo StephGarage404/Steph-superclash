@@ -2,6 +2,7 @@ import React from 'react';
 import ProgressBar from './ProgressBar';
 import { useSelector } from 'react-redux';
 import './Game.css';
+import './Monster.css'
 
 
 
@@ -18,7 +19,8 @@ const Monster = () => {
                   <div className="col-sm-6">
                     <span className="badge badge-danger ml-2" id="degatSpanMonster"></span>
                     <h1>{monster.name}</h1>
-                    <img className="img-fluid" src="/Cavalier.png" alt="monster" />
+                    <img className="img-fluid" id="LaSorciere" src="/Sorciere.png" alt="monster" />
+                    <img className="img-fluid" id="BouleBleue" src="/ok.png" alt="monster" />
                   </div>
                 </div>
                 <div className="row justify-content-center mt-3">
