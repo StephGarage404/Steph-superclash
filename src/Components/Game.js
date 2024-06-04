@@ -13,6 +13,7 @@ const App = () => {
         <section className="container-fluid">
           <PlayerList />
         </section >
+          
       </div>
     )
   }

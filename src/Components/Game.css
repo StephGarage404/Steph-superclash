@@ -27,36 +27,6 @@ h1 {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-/*Pekka */
-.player1 {
-  position: absolute;
-  top: 26em;
-  left: 1em;
-}
-
-/*Archer */
-.player2 {
-  position: absolute;
-  top: 26em;
-  left: 86em;
-}
- /* Chevalier */
-.player3 {
-  position: absolute;
-  top: 57em;
-  left: 86em;
-}
-/*Dragon */
-.player4 {
-  position: absolute;
-  top: 57em;
-  left: 1em;
-}
-
-#cardPlayer {
-  margin-top: -11em; 
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -647,6 +617,7 @@ display: none;
 .carousel-wrapper .flickity-viewport, .carousel-wrapper .flickity-slider {
 overflow: visible;
 }
+
 
 
 
