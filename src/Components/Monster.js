@@ -1,29 +1,52 @@
-import React from 'react';
-import ProgressBar from './ProgressBar';
+import React, { useRef, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import ProgressBar from './ProgressBar';
 import './Game.css';
-import './Monster.css'
-import { useRef } from 'react';
-
-
+import './Monster.css';
 
 const Monster = () => {
-  const monster = useSelector(state => state.fight.monster)
-  console.log(monster.pv)
+  const monster = useSelector(state => state.fight.monster);
+  console.log(monster.pv);
 
-  const chevalier = useRef()
-  const divChevalier = chevalier.current
-  console.log(divChevalier)
+  const chevalierRef = useRef(null);
+  const archerRef = useRef(null);
+  const dragonRef = useRef(null);
+  const pekkaRef = useRef(null);
 
+  useEffect(() => {
+    console.log('Chevalier:', chevalierRef.current);
+    console.log('Archer:', archerRef.current);
+    console.log('Dragon:', dragonRef.current);
+    console.log('Pekka:', pekkaRef.current);
+  }, []);
+
+  const players = useSelector(state => state.fight.players);
+  console.log(players)
   const test = () => {
-    divChevalier.classList.remove("hidden")
-    setTimeout(() => { divChevalier.classList.add("hidden") }, 2000)
+    players.map((player) => {
+    if (monster.playerHit == 1) {
+       pekkaRef.current.classList.remove("hidden")
+        setTimeout(() => { pekkaRef.current.classList.add("hidden") }, 2000)
+      }else if (monster.playerHit == 2) {
+        archerRef.current.classList.remove("hidden")
+        setTimeout(() => { archerRef.current.classList.add("hidden") }, 2000)
+      }else if (monster.playerHit == 3) {
+        chevalierRef.current.classList.remove("hidden")
+        setTimeout(() => { chevalierRef.current.classList.add("hidden") }, 2000)
+      }else if (monster.playerHit == 4) {
+        dragonRef.current.classList.remove("hidden")
+        setTimeout(() => { dragonRef.current.classList.add("hidden") }, 2000)
+      }
+    }
+  )
   }
-
-  if (divChevalier != undefined) {
+  
+  if (chevalierRef.current != undefined) {
     test()
   }
-
+  
+  // chevalierRef.current.classList.remove("hidden")
+  // setTimeout(() => { chevalierRef.current.classList.add("hidden") }, 2000)
 
   return (
     <section className="d-flex align-items-center" id='monstre'>
@@ -36,10 +59,10 @@ const Monster = () => {
                   <span className="badge badge-danger ml-2" id="degatSpanMonster"></span>
                   <h1>{monster.name}</h1>
                   <img className="img-fluid LaSorciere" src="/Sorciere.png" alt="monster" />
-                  <img ref={chevalier} className="img-fluid hidden fireBall" src="/fireball.png" alt="chevalier" />
-                  <img className="img-fluid hidden fireBallDragon" src="/fireball.png" alt="monster" />
-                  <img className="img-fluid hidden fireBallPekka" src="/fireball.png" alt="monster" />
-                  <img className="img-fluid hidden fireBallArcher" src="/fireball.png" alt="monster" />
+                  <img ref={chevalierRef} className="img-fluid hidden fireBall" src="/fireball.png" alt="chevalier" />
+                  <img ref={dragonRef} className="img-fluid hidden fireBallDragon" src="/fireball.png" alt="monster" />
+                  <img ref={pekkaRef} className="img-fluid hidden fireBallPekka" src="/fireball.png" alt="monster" />
+                  <img ref={archerRef} className="img-fluid hidden fireBallArcher" src="/fireball.png" alt="monster" />
                 </div>
               </div>
               <div className="row justify-content-center mt-3">

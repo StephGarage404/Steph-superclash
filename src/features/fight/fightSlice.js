@@ -30,6 +30,7 @@ const fightSlice = createSlice({
             const damage = action.payload;
             state.monster.pv = Math.max(state.monster.pv - damage, 0);
         },
+
         hitBack: (state, action) => {
             const { playerId, attack } = action.payload;
             state.players = state.players.map(player => {
@@ -39,6 +40,7 @@ const fightSlice = createSlice({
                 return player;
             });
         },
+
         checkGameOver: (state) => {
             const allPlayersDefeated = state.players.every(player => player.pv <= 0);
             if (allPlayersDefeated) {
@@ -48,11 +50,25 @@ const fightSlice = createSlice({
             } else {
                 state.gameState = 'continue';
             }
+        },
+
+        hitByPlayer: (state, action) => {
+            const playerId = action.payload.playerID;
+
+            state.players = state.players.map(player => {
+                
+                if (player.id == playerId) {
+                    state.monster.playerHit = player.id
+                    console.log(state.monster.playerHit)
+                }
+                return player
+            });
         }
+
     }
 });
 
-export const { hitMonster, hitBack, checkGameOver } = fightSlice.actions;
+export const { hitMonster, hitBack, checkGameOver, hitByPlayer } = fightSlice.actions;
 
 export const checkGameOverThunk = () => (dispatch, getState) => {
     dispatch(checkGameOver());

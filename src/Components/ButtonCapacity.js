@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { hitMonster, hitBack, checkGameOverThunk } from '../features/fight/fightSlice';
+import { hitMonster, hitBack, checkGameOverThunk, hitByPlayer } from '../features/fight/fightSlice';
 import './ButtonCapacity.css';
 
 
 const ButtonCapacity = ({ player }) => {
+    
     const dispatch = useDispatch();
   
     const monster = useSelector(state => state.fight.monster);
@@ -17,12 +18,17 @@ const ButtonCapacity = ({ player }) => {
             console.log('Aie !');
 
             dispatch(checkGameOverThunk());
+            
         }
 
         console.log("Je réplique");
     };
 
     const fireBall = () => {
+        console.log(player)
+        dispatch(hitByPlayer({ playerID: player })
+        
+    )
         dispatch(hitBack({
             playerId: player,
             attack: 10

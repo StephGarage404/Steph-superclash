@@ -32,3 +32,31 @@
   #cardPlayer {
     margin-top: -11em; 
   }
+
+/* card vibrante  */
+
+  .vibrate {
+    animation-name: CardVibrate;
+    animation-duration: 2s ;
+    animation-direction: normal  ;
+    animation-fill-mode: backwards;
+    animation-delay: 0s;
+    animation-timing-function:linear ;
+    animation-iteration-count:infinite ;
+  }
+
+/* KEYFRAME */
+
+  @keyframes CardVibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-10deg); }
+    80% { transform: rotate(10deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-10deg); }
+  }
