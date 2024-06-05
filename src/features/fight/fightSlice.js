@@ -16,7 +16,8 @@ const initialState = {
         pv: 100,
         pvMax: 100,
         mana: 100,
-        manaMax: 100
+        manaMax: 100, 
+        playerHit: 0
     },
     gameState: 'continue'
 };

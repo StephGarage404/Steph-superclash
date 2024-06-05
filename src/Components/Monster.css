@@ -9,7 +9,7 @@
     left: 27em;
 } */
 
-#BouleBleue {
+.fireBall {
     width: 13em;
     height: 10em;
     background-size: cover;
@@ -33,15 +33,125 @@
     z-index: 5;
   }
 
+  .fireBallDragon {
+    width: 13em;
+    height: 10em;
+    background-size: cover;
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: -30em;
+    left: 27em;
+    transition: transform 1s ease-in-out;
+    position: absolute;
+
+    top: -220px;
+    left: 50;
+    animation-name: drive2;
+    animation-duration: 4s ;
+    animation-direction: normal  ;
+    animation-fill-mode: backwards;
+    animation-delay: 0s;
+    animation-timing-function:linear ;
+    animation-iteration-count:infinite ;
+    z-index: 5;
+  }
+
+  .fireBallPekka {
+    width: 13em;
+    height: 10em;
+    background-size: cover;
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: -30em;
+    left: 27em;
+    transition: transform 1s ease-in-out;
+    position: absolute;
+
+    top: -220px;
+    left: 50;
+    animation-name: drive3;
+    animation-duration: 4s ;
+    animation-direction: normal  ;
+    animation-fill-mode: backwards;
+    animation-delay: 0s;
+    animation-timing-function:linear ;
+    animation-iteration-count:infinite ;
+    z-index: 5;
+  }
+
+  .fireBallArcher {
+    width: 13em;
+    height: 10em;
+    background-size: cover;
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: -30em;
+    left: 27em;
+    transition: transform 1s ease-in-out;
+    position: absolute;
+
+    top: -220px;
+    left: 50;
+    animation-name: drive4;
+    animation-duration: 4s ;
+    animation-direction: normal  ;
+    animation-fill-mode: backwards;
+    animation-delay: 0s;
+    animation-timing-function:linear ;
+    animation-iteration-count:infinite ;
+    z-index: 5;
+  }
+
+
   /*// KEYFRAMES //*/
-@keyframes drive {
+
+  @keyframes drive {
+      0%{
+        transform: translateX(0%);
+      }
+      100%{
+        transform: translateX(2000%);
+        right: 500px;
+    }}
+
+  
+  @keyframes drive2 {
     0%{
-      transform: translateX(0%);
+      transform: translateX(0%) rotate(-180deg);
     }
     100%{
-      transform: translateX(2000%);
+      transform: translateX(-2000%) rotate(-180deg);
       right: 500px;
   }}
+
+
+  @keyframes drive3 {
+    0%{
+      transform: translateY(0%) translateX(0%) rotate(-180deg);
+    }
+    100%{
+      transform: translateY(-2180%) translateX(-2000%) rotate(-180deg);
+      right: 500px;
+  }}
+
+
+  @keyframes drive4 {
+    0%{
+      transform: translateY(0%) translateX(0%) rotate(-30deg);
+    }
+    100%{
+      transform: translateY(-2180%) translateX(2000%) rotate(-30deg);
+      right: 500px;
+  }
+  }
+
+  .hidden {
+    display: none;
+  }
+
  
   
  

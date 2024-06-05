@@ -31,7 +31,7 @@ const ButtonCapacity = ({ player }) => {
         console.log("fireBall")
     }
 
-    //  lancer func-ion en meme temps que le hit back 
+    //  lancer function en meme temps que le hit back 
 
     // nouvelle fctn qui prend la div sorciere en parametre et le payer sur qui elle doit aller (en props)
 
