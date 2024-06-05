@@ -20,7 +20,7 @@ const Monster = () => {
                     <span className="badge badge-danger ml-2" id="degatSpanMonster"></span>
                     <h1>{monster.name}</h1>
                     <img className="img-fluid" id="LaSorciere" src="/Sorciere.png" alt="monster" />
-                    <img className="img-fluid" id="BouleBleue" src="/ok.png" alt="monster" />
+                    <img className="img-fluid" id="BouleBleue" src="/fireball.png" alt="monster" />
                   </div>
                 </div>
                 <div className="row justify-content-center mt-3">
