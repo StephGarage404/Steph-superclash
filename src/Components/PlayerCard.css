@@ -1,8 +1,17 @@
-.cardBlur {
+/* couleur du fond de ma carte joueur en vie  */
+
+.cardAlive {
     background-color: rgb(0, 0, 0);
+  }
+
+/* couleur du fond de ma carte joueur quand il est mort  */
+
+  .cardDead {
+    background-color: rgb(143, 143, 143);
   }
   
 
+  
 /*Pekka */
 .player1 {
     position: absolute;

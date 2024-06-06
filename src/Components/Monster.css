@@ -10,6 +10,29 @@
   width: 100em;
 }
 
+/* TITRE MONSTER */
+h1 {
+  margin-top: -9em !important;
+  color: rgb(198, 130, 66) !important;
+  /* background-color: rgba(255, 45, 45, 0.75); */
+  text-transform: uppercase;
+			color: rgb(61, 83, 209);
+			font-weight: 100;
+			letter-spacing: 3px;
+			font-size: 70px;
+      animation: blueAnim 2s linear infinite;
+			animation-delay: 1s;
+}
+
+@keyframes blueAnim {
+  from {
+    text-shadow: 0 0 5px blue,
+           0 0 15px blue,
+           0 0 30px blue,
+           0 0 60px blue;
+  }
+}
+
 
 /* FIREBALL animation */
 

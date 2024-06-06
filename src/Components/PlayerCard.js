@@ -12,6 +12,7 @@ const PlayerCard = ({ player }) => {
 
     const monster = useSelector(state => state.fight.monster )
     console.log(monster)
+
     if (imgRef != undefined) {
         if (player.id == monster.playerHit) {
             
@@ -25,19 +26,43 @@ const PlayerCard = ({ player }) => {
             }, 2000 );
         }}
     }
+    
+    let showButton = "visible"
+    let cardBackground = "cardAlive"
+    if (player.pv == 0) {
+        cardBackground = "cardDead"
+        showButton = "invisible"
+    }
+
+
 
     return ( 
         <div className={`col-sm-3 d-flex justify-content-center align-items-center player${player.id}`} id='cardPlayer' style={{ height: '0vh' }}>
             <div className="card text-center" id={player.id} style={{ width: '18rem' }}>
-                <div className="card-body cardBlur">
+                <div className={`card-body ${cardBackground}`}>
                     <h5 className="text-white">{player.name}</h5>
-                    <ProgressBar pv={player.pv} pvMax={player.pvMax} faType='fa-heart' barName=' : pv ' bgType='bg-danger' />
-                    <ProgressBar pv={player.mana} pvMax={player.manaMax} faType='fa-fire-alt' barName=' : mana ' />
-                    <span className="badge badge-danger ml-2" id="degatSpanJ1"></span>
-                    <img ref={imgRef} src={player.image} className="card-img-top" alt={player.name}></img>
-                    <div className="row mt-3">
-                        <div className="col">
-                            <ButtonCapacity player={player.id} pv={player.pv} />
+
+                        <ProgressBar 
+                            pv={player.pv}
+                            pvMax={player.pvMax}
+                            faType='fa-heart'
+                            barName=' : pv '
+                            bgType='bg-danger' 
+                        />
+
+                        <ProgressBar 
+                            pv={player.mana}
+                            pvMax={player.manaMax}
+                            faType='fa-fire-alt'
+                            barName=' : mana ' 
+                        />
+
+                        <span className="badge badge-danger ml-2" id="degatSpanJ1"></span>
+                            <img ref={imgRef} src={player.image} className="card-img-top" alt={player.name}></img>
+                        <div className="row mt-3">
+
+                        <div className={`col ${showButton}`}>
+                            <ButtonCapacity player={player} />
                         </div>
                     </div>
                 </div>

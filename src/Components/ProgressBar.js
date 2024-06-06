@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ProgressBar = (props) => {
-
+const ProgressBar = (props) =>  
+{
     {
         return (
             <div className="progress md-progress" >
@@ -16,7 +16,12 @@ const ProgressBar = (props) => {
             </div >
         )
     }
-
 }
 
-export default ProgressBar;
+export default ProgressBar;   
+
+
+
+
+                                                
+                                        

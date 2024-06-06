@@ -12,7 +12,7 @@ const initialState = {
         { name: "Dragon", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 4, image: ImgDragon }
     ],
     monster: {
-        name: "SORCIÈRE",
+        name: "MONSTER",
         pv: 100,
         pvMax: 100,
         mana: 100,
@@ -26,17 +26,22 @@ const fightSlice = createSlice({
     name: "fight",
     initialState,
     reducers: {
-        hitMonster: (state, action) => {
+        hitMonster: (state, action) => 
+        {
             const damage = action.payload;
             state.monster.pv = Math.max(state.monster.pv - damage, 0);
         },
 
-        hitBack: (state, action) => {
+        hitBack: (state, action) =>   
+        {
             const { playerId, attack } = action.payload;
-            state.players = state.players.map(player => {
-                if (player.id === playerId) {
+            state.players = state.players.map(player => 
+            {
+                if (player.id === playerId) 
+                {
                     player.pv = Math.max(player.pv - attack, 0);
                 }
+
                 return player;
             });
         },
@@ -64,7 +69,6 @@ const fightSlice = createSlice({
                 return player
             });
         }
-
     }
 });
 

@@ -45,8 +45,7 @@ const Monster = () => {
     test()
   }
   
-  // chevalierRef.current.classList.remove("hidden")
-  // setTimeout(() => { chevalierRef.current.classList.add("hidden") }, 2000)
+  
 
   return (
     <section className="d-flex align-items-center" id='monstre'>

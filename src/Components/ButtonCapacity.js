@@ -5,9 +5,9 @@ import './ButtonCapacity.css';
 
 
 const ButtonCapacity = ({ player }) => {
-    
+
     const dispatch = useDispatch();
-  
+
     const monster = useSelector(state => state.fight.monster);
     const players = useSelector(state => state.fight.players);
     const gameState = useSelector(state => state.fight.gameState);
@@ -18,30 +18,23 @@ const ButtonCapacity = ({ player }) => {
             console.log('Aie !');
 
             dispatch(checkGameOverThunk());
-            
         }
 
         console.log("Je réplique");
     };
 
     const fireBall = () => {
-        console.log(player)
-        dispatch(hitByPlayer({ playerID: player })
-        
+        console.log(player.id)
+        dispatch(hitByPlayer({ playerID: player.id })
     )
         dispatch(hitBack({
-            playerId: player,
+            playerId: player.id,
             attack: 10
         }));
-    
+
         console.log("fireBall")
     }
 
-    //  lancer function en meme temps que le hit back 
-
-    // nouvelle fctn qui prend la div sorciere en parametre et le payer sur qui elle doit aller (en props)
-
-    // mettre la boule  display none et a hitback lancer lannimation
 
     if (gameState === 'victory') {
         return <div className='VictoireJoueur'>Victoire !</div>;

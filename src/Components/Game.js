@@ -1,13 +1,8 @@
 import React from 'react';
 import './Game.css';
 import Monster from './Monster';
-import ProgressBar from './ProgressBar';
 import PlayerList from './PlayerList';
 
-
-const fireBall = () => {
-
-}
 
 const Game = () => {
    {
