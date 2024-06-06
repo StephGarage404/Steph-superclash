@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import StaticExample from './Components/Accueil';
 
 
 const container = document.getElementById('root');

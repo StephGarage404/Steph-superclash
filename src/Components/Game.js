@@ -9,7 +9,7 @@ const fireBall = () => {
 
 }
 
-const App = () => {
+const Game = () => {
    {
     return (
       <div className="App">
@@ -18,10 +18,9 @@ const App = () => {
         <section className="container-fluid">
           <PlayerList />
         </section >
-          
       </div>
     )
   }
 }
 
-export default App;
+export default Game;

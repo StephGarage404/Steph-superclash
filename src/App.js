@@ -1,16 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import React from 'react';
+import Monster from './Monster';
+import PlayerList from './PlayerList';
+import Modal from 'react-bootstrap/Modal';
 
+const App = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
 
-const App = () => (
-  <div className="App">
-    <Monster />
-    <br></br>
-    <section className="container-fluid">
-      <PlayerList />
-    </section>
-  </div>
-)
+  const handleStart = () => {
+    setIsPlaying(true);
+  };
+
+  return (
+    <div className="App">
+      {isPlaying ? (
+        <div>
+          <Monster />
+          <br />
+          <section className="container-fluid">
+            <PlayerList />
+          </section>
+        </div>
+      ) : (
+        <Home onStart={handleStart} />
+      )}
+    </div>
+  );
+};
 
 export default App;
