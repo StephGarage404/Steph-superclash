@@ -19,7 +19,7 @@ const PlayerCard = ({ player }) => {
         if (monster.playerHit) {
             setTimeout(() => {
                 img.classList.add("vibrate")
-            }, 1000 );
+            }, 400 );
             setTimeout(() => {
                 img.classList.remove("vibrate")
             }, 2000 );

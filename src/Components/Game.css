@@ -15,15 +15,7 @@
   pointer-events: none;
 }
 
-#monstre {
-  position:absolute;
-  top: 56em;
-  left: 17em;
-}
 
-.LaSorciere {
-  width: 100em;
-}
 
 h1 {
   margin-top: -9em !important;
@@ -621,7 +613,3 @@ display: none;
 .carousel-wrapper .flickity-viewport, .carousel-wrapper .flickity-slider {
 overflow: visible;
 }
-
-
-
-
