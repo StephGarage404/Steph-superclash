@@ -13,13 +13,14 @@
 /* TITRE MONSTER */
 h1 {
   margin-top: -9em !important;
-  color: rgb(198, 130, 66) !important;
+  color: rgb(255, 255, 255) !important;
   /* background-color: rgba(255, 45, 45, 0.75); */
   text-transform: uppercase;
 			color: rgb(61, 83, 209);
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 			font-weight: 100;
 			letter-spacing: 3px;
-			font-size: 70px;
+      font-size: 40px !important;
       animation: blueAnim 2s linear infinite;
 			animation-delay: 1s;
 }
@@ -121,7 +122,7 @@ h1 {
   top: -220px;
   left: 50;
   animation-name: drive4;
-  animation-duration: 4s ;
+  animation-duration: 2s ;
   animation-direction: normal  ;
   animation-fill-mode: backwards;
   animation-timing-function:linear ;
